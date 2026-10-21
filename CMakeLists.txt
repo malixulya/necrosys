@@ -12,6 +12,10 @@ elseif(MSVC)
 else()
     target_compile_options(necrosys PRIVATE -fno-exceptions -fno-rtti)
 endif()
+set_target_properties(necrosys PROPERTIES
+    VS_DEBUGGER_WORKING_DIRECTORY "${CMAKE_SOURCE_DIR}"
+    DEBUGGER_WORKING_DIRECTORY "${CMAKE_SOURCE_DIR}"
+)
 add_subdirectory(src)
 add_subdirectory(vendor)
 add_subdirectory(res)
