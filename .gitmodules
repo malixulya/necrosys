@@ -1,0 +1,18 @@
+[submodule "vendor/volk"]
+	path = vendor/volk
+	url = https://github.com/zeux/volk.git
+[submodule "vendor/SDL_mixer"]
+	path = vendor/SDL_mixer
+	url = https://github.com/libsdl-org/SDL_mixer
+[submodule "vendor/SDL"]
+	path = vendor/SDL
+	url = https://github.com/libsdl-org/SDL
+[submodule "vendor/VulkanMemoryAllocator"]
+	path = vendor/VulkanMemoryAllocator
+	url = https://github.com/GPUOpen-LibrariesAndSDKs/VulkanMemoryAllocator
+[submodule "vendor/vk-bootstrap"]
+	path = vendor/vk-bootstrap
+	url = https://github.com/charles-lunarg/vk-bootstrap
+[submodule "vendor/glm"]
+	path = vendor/glm
+	url = https://github.com/g-truc/glm.git
