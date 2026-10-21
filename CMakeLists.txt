@@ -16,6 +16,15 @@ set_target_properties(necrosys PROPERTIES
     VS_DEBUGGER_WORKING_DIRECTORY "${CMAKE_SOURCE_DIR}"
     DEBUGGER_WORKING_DIRECTORY "${CMAKE_SOURCE_DIR}"
 )
+find_program(CLANG_TIDY_EXE NAMES clang-tidy)
+
+if(CLANG_TIDY_EXE)
+    set_target_properties(necrosys PROPERTIES
+        CXX_CLANG_TIDY "${CLANG_TIDY_EXE};--config-file=${CMAKE_SOURCE_DIR}/.clang-tidy"
+    )
+else()
+    message(WARNING "clang-tidy not found; skipping static analysis")
+endif()
 add_subdirectory(src)
 add_subdirectory(vendor)
 add_subdirectory(res)
